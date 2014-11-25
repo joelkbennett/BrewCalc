@@ -39,7 +39,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <label class="sr-only" for="grain" placeholder="Enter Total Grain Weight">Grain Weight</label>
-                        <input type="text" class="form-control" id="grain"/>
+                        <input type="number" class="form-control" id="grain"/>
                     </div>
                 </div>
             </form>
@@ -61,16 +61,28 @@
     <div id="htl-visual" class="vessel">
         <div class="liquid water"></div>
         <div class="measure"></div>
+        <div class="indicator">
+            <div class="indicator-label inline-block">0</div>
+            <div class="arrow-left inline-block"></div>
+        </div>
     </div>
 
     <div id="mash-visual" class="vessel">
         <div class="liquid mash"></div>
         <div class="measure"></div>
+        <div class="indicator">
+            <div class="indicator-label inline-block">0</div>
+            <div class="arrow-left inline-block"></div>
+        </div>
     </div>
 
     <div id="kettle-visual" class="vessel">
         <div class="liquid wort"></div>
         <div class="measure"></div>
+        <div class="indicator">
+            <div class="indicator-label inline-block">0</div>
+            <div class="arrow-left inline-block"></div>
+        </div>
     </div>
 </section>
 

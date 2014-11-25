@@ -17,6 +17,10 @@ function VesselVisual(config) {
         this.config.el.find('.liquid').animate({
             height: newLiquidHeight
         });
+        this.config.el.find('.indicator').animate({
+            bottom: newLiquidHeight - 15
+        }, 1000);
+        this.config.el.find('.indicator-label').html(liquidHeight);
     };
 }
 

@@ -12,7 +12,7 @@ var brew = new VolCalc(),
     //postBoil = mashDetails.find('#post-boil-vol'),
     postCool = mashDetails.find('#cooled-vol');
 
-grainInput.on('keyup', function() {
+grainInput.on('change', function() {
     brew.init($('#grain').val());
     htlVisual.update(brew.getHeight(brew.getSpargeVol(), system.liquorDenom));
     mashVisual.update(brew.getHeight(brew.getMashVol(), system.mashDenom));
