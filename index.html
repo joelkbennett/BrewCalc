@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brew Volumn Indicator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brew Calc</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="grain-input">
+    <div class="row">
+        <div class="col-md-2">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label class="sr-only" for="grain" placeholder="Enter Total Grain Weight">Grain Weight</label>
+                        <input type="text" class="form-control" id="grain"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="mash-details">
+        <h2>Vol in Centimetres</h2>
+        <div><p><strong>Mash Vol:</strong> <span id="mash-vol"></span></p></div>
+        <!--<div><p><strong>Mash-out Vol height:</strong> <span id="mash-out-vol"></span> cm</p></div>-->
+        <div><p><strong>Sparge Vol:</strong> <span id="sparge-vol"></span></p></div>
+        <div><p><strong>Pre-boil Vol:</strong> <span id="pre-boil-vol"></span></p></div>
+        <!--<div><p><strong>Post-boil Vol height:</strong> <span id="post-boil-vol"></span> cm</p></div>-->
+        <div><p><strong>After Cooling:</strong> <span id="cooled-vol"></span></p></div>
+</section>
+
+<section id="visuals">
+    <div id="htl-visual" class="vessel">
+        <div class="liquid water"></div>
+        <div class="measure"></div>
+    </div>
+
+    <div id="mash-visual" class="vessel">
+        <div class="liquid mash"></div>
+        <div class="measure"></div>
+    </div>
+
+    <div id="kettle-visual" class="vessel">
+        <div class="liquid wort"></div>
+        <div class="measure"></div>
+    </div>
+</section>
+
+<div id="sparge-vol"></div>
+<div id="boil-vol"></div>
+<div id="final-vol"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app/systemPresets.js"></script>
+<script src="js/app/volCalc.js"></script>
+<script src="js/app/visuals.js"></script>
+<script src="js/app/app.js"></script>
+</body>
+</html>
