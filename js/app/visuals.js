@@ -23,24 +23,3 @@ function VesselVisual(config) {
         this.config.el.find('.indicator-label').html(liquidHeight);
     };
 }
-
-var htlVisual = new VesselVisual({
-    el: $('#htl-visual'),
-    size: 25,
-    radius: 15.25
-});
-htlVisual.init();
-
-var mashVisual = new VesselVisual({
-    el: $('#mash-visual'),
-    size: 30,
-    radius: 17.25
-});
-mashVisual.init();
-
-var kettleVisual = new VesselVisual({
-    el: $('#kettle-visual'),
-    size: 35,
-    radius: 19
-});
-kettleVisual.init();
