@@ -40,9 +40,13 @@
 <section id="grain-input" class="row section-padding">
         <div class="col-md-4">
             <form class="form-inline" role="form">
-                    <div class="input-group input-group-lg">
-                        <span class="input-group-addon">Grain Weight: </span><input type="number" class="form-control" id="grain"/><span class="input-group-addon">Pounds</span>
-                    </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon">Grain Weight: </span><input type="number" class="form-control" id="grain"/><span class="input-group-addon">Pounds</span>
+                </div>
+                <br><br>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon">Hop Weight: </span><input type="number" class="form-control" id="hop"/><span class="input-group-addon">Ounces</span>
+                </div>
             </form>
         </div>
 </section>
@@ -67,29 +71,34 @@
     <div class="col-md-9">
         <section id="visuals">
             <div id="htl-visual" class="vessel">
+                <div class="vessel-name">Hot Liquor</div>
                 <div class="liquid water"></div>
                 <div class="measure"></div>
                 <div class="indicator">
-                    <div class="indicator-label inline-block drop-shadow">0</div>
+                    <div class="indicator-label inline-block drop-shadow">0 cm</div>
                     <div class="arrow-left inline-block"></div>
                 </div>
             </div>
 
 
             <div id="mash-visual" class="vessel">
+                <div class="vessel-name">Mash Tun</div>
+                <div id="mash-grain"></div>
                 <div class="liquid mash"></div>
                 <div class="measure"></div>
                 <div class="indicator">
-                    <div class="indicator-label inline-block drop-shadow">0</div>
+                    <div class="indicator-label inline-block drop-shadow">0 cm</div>
                     <div class="arrow-left inline-block"></div>
                 </div>
             </div>
 
             <div id="kettle-visual" class="vessel">
+                <div class="vessel-name">Boil Kettle</div>
+                <div id="kettle-hops"></div>
                 <div class="liquid wort"></div>
                 <div class="measure"></div>
                 <div class="indicator">
-                    <div class="indicator-label inline-block drop-shadow">0</div>
+                    <div class="indicator-label inline-block drop-shadow">0 cm</div>
                     <div class="arrow-left inline-block"></div>
                 </div>
             </div>

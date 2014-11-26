@@ -22,6 +22,17 @@
     overflow: hidden;
 }
 
+.vessel-name {
+    padding: 0 10px;
+    background-color: #ddd;
+    color: #333;
+    display: inline-block;
+    margin-left: 0;
+    top: 5px;
+    position: absolute;
+    left: 5px;
+}
+
 .liquid {
     position: absolute;
     bottom: 0;
@@ -59,7 +70,7 @@
     top: 0;
     right: 15px;
     background-color: green;
-    width: 50px;
+    width: 80px;
     height: 30px;
     text-align: center;
     line-height: 28px;
@@ -78,4 +89,31 @@
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-left:15px solid green;
+}
+
+#mash-grain, #kettle-hops {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    z-index: 99;
+    opacity: .5;
+    width: 80%;
+}
+
+.grain, .hop {
+    display: inline-block;
+    margin: 1px;
+    border-radius: 50%;
+}
+
+.grain {
+    background-image: radial-gradient(circle, yellow 0%, orange 100%);
+    width: 5px;
+    height: 5px;
+}
+
+.hop {
+    background-image: radial-gradient(circle, lightgreen, green);
+    width: 10px;
+    height: 10px;
 }

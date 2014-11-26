@@ -4,6 +4,7 @@
 
 var brew = new VolCalc(),
     grainInput = $('#grain'),
+    hopInput = $('#hop'),
     mashDetails = $('#mash-details'),
     mashVol = mashDetails.find('#mash-vol'),
     //mashOutVol = mashDetails.find("#mash-out-vol"),
@@ -13,10 +14,17 @@ var brew = new VolCalc(),
     postCool = mashDetails.find('#cooled-vol');
 
 grainInput.on('change', function() {
-    brew.init($('#grain').val());
+    var grainWeight = grainInput.val();
+    brew.init(grainWeight);
     htlVisual.update(brew.getHeight(brew.getSpargeVol(), system.liquorDenom));
     mashVisual.update(brew.getHeight(brew.getMashVol(), system.mashDenom));
+    mashVisual.grainAmount(grainWeight);
     kettleVisual.update(brew.getHeight(brew.getPreBoil(), system.kettleDenom));
+});
+
+hopInput.on('change', function() {
+   var hopWeight = hopInput.val();
+    kettleVisual.hopAmount(hopWeight);
 });
 
 var htlVisual = new VesselVisual({
