@@ -59,10 +59,13 @@
 
 .indicator {
     position: absolute;
-    right: 20px;
-    bottom: -15px;
     width: 85px;
     height: 30px;
+}
+
+.level-indicator {
+    right: 20px;
+    bottom: -15px;
 }
 
 .indicator-label {
@@ -97,7 +100,8 @@
     left: 5px;
     z-index: 99;
     opacity: .5;
-    width: 80%;
+    width: 92%;
+    opacity: 0;
 }
 
 .grain, .hop {
@@ -107,13 +111,13 @@
 }
 
 .grain {
-    background-image: radial-gradient(circle, yellow 0%, orange 100%);
-    width: 5px;
-    height: 5px;
+    background-color: yellow;
+    width: 12px;
+    height: 12px;
 }
 
 .hop {
-    background-image: radial-gradient(circle, lightgreen, green);
-    width: 10px;
-    height: 10px;
+    background-color: lightgreen;
+    width: 12px;
+    height: 12px;
 }

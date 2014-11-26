@@ -17,7 +17,7 @@ function VesselVisual(config) {
         this.config.el.find('.liquid').animate({
             height: newLiquidHeight
         });
-        this.config.el.find('.indicator').animate({
+        this.config.el.find('.level-indicator').animate({
             bottom: newLiquidHeight - 15
         }, 1000);
         this.config.el.find('.indicator-label').html(liquidHeight + " cm");
@@ -34,6 +34,10 @@ function VesselVisual(config) {
             grainEl.className = "grain";
             theMash.appendChild(grainEl);
         }
+
+        $(theMash).animate({
+            opacity: .5
+        }, 100);
     };
 
     this.resetGrainBed = function() {
@@ -52,6 +56,10 @@ function VesselVisual(config) {
             hopEl.className = "hop";
             theKettle.appendChild(hopEl);
         }
+
+        $(theKettle).animate({
+            opacity: .5
+        }, 100);
     };
 
     this.resetHops = function() {
