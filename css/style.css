@@ -1,9 +1,13 @@
-body {
-    margin: 2em;
-}
-
 .inline-block {
     display: inline-block;
+}
+
+.section-padding {
+    padding: 2em;
+}
+
+.drop-shadow {
+    box-shadow: -2px 2px 5px rgba(0,0,0,.3);
 }
 
 .vessel {
@@ -13,7 +17,7 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     float: left;
-    margin: 20px 20px 20px 0;
+    margin: 0px 20px 20px 0;
     position: relative;
     overflow: hidden;
 }
@@ -25,11 +29,11 @@ body {
 }
 
 .water {
-    background-color: #E0F0FF;
+    background-image: radial-gradient(circle, #FFFFFF, #E0F0FF);
 }
 
 .mash, .wort {
-    background-color: brown;
+    background-image: radial-gradient(circle, #7b1919, brown);
 }
 
 .measure {
