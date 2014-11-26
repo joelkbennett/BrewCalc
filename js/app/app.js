@@ -15,6 +15,7 @@ var brew = new VolCalc(),
 
 grainInput.on('change', function() {
     var grainWeight = grainInput.val();
+
     brew.init(grainWeight);
     htlVisual.update(brew.getHeight(brew.getSpargeVol(), system.liquorDenom));
     mashVisual.update(brew.getHeight(brew.getMashVol(), system.mashDenom));
@@ -23,7 +24,7 @@ grainInput.on('change', function() {
 });
 
 hopInput.on('change', function() {
-   var hopWeight = hopInput.val();
+    var hopWeight = hopInput.val();
     kettleVisual.hopAmount(hopWeight);
 });
 

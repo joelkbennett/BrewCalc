@@ -20,7 +20,7 @@ function VesselVisual(config) {
         this.config.el.find('.level-indicator').animate({
             bottom: newLiquidHeight - 15
         }, 1000);
-        this.config.el.find('.indicator-label').html(liquidHeight + " cm");
+        this.config.el.find('.level-indicator>.indicator-label').html(liquidHeight + " cm");
     };
 
     this.grainAmount = function(amount) {
@@ -38,6 +38,8 @@ function VesselVisual(config) {
         $(theMash).animate({
             opacity: .5
         }, 100);
+
+        this.config.el.find('.grain-indicator>.indicator-label').html(brew.getAbsorption() + " litres Lost");
     };
 
     this.resetGrainBed = function() {
@@ -51,7 +53,6 @@ function VesselVisual(config) {
         var hops = amount * 10;
 
         for ( var i = 0; i < hops; i++ ) {
-            console.log(i);
             var hopEl = document.createElement("div");
             hopEl.className = "hop";
             theKettle.appendChild(hopEl);
@@ -60,6 +61,8 @@ function VesselVisual(config) {
         $(theKettle).animate({
             opacity: .5
         }, 100);
+
+        this.config.el.find('.hop-indicator>.indicator-label').html(brew.getHopAbsorption(amount) + " litres Lost");
     };
 
     this.resetHops = function() {

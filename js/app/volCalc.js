@@ -2,7 +2,7 @@
  * Created by Joel on 2014-11-24.
  */
 
-function VolCalc(grainWeight) {
+function VolCalc() {
     this.init = function(grainWeight) {
         this.grainWeight = parseInt(grainWeight);
         this.setDisplay();
@@ -16,6 +16,13 @@ function VolCalc(grainWeight) {
     // returns volume of water absorbed (and lost) into grain
     this.getAbsorption = function() {
         return Math.round((this.grainWeight * system.absorption) * 100) / 100;
+    };
+
+    // return the water absorbed by hops, for a better estimate of final volume into the fermenter
+    this.getHopAbsorption = function(hopWeight) {
+        this.hopWeight = parseInt(hopWeight);
+
+        return this.hopWeight * system.hopAbsorption / 1000;
     };
 
     // returns the volume of the first run wort

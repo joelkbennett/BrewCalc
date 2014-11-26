@@ -10,6 +10,7 @@ var system = {
     batchSize: 19, // in litres
     waterRatio: 1.2, // in litres per pound
     absorption: .45425, // litres per pound
+    hopAbsorption: 425, // in millilitres
     evapVol: 4, // in litres, for 60 minutes
     mashDeadSpace: .42, // in litres
     shrinkage: .04 // cooling shrinkage

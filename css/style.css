@@ -121,3 +121,12 @@
     width: 12px;
     height: 12px;
 }
+
+.grain-indicator, .hop-indicator {
+    top: -22px;
+    left: 20px;
+}
+
+.grain-indicator .indicator-label, .hop-indicator .indicator-label {
+    background-color: red;
+}
