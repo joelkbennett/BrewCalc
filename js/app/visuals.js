@@ -39,7 +39,7 @@ function VesselVisual(config) {
             opacity: .5
         }, 100);
 
-        this.config.el.find('.grain-indicator>.indicator-label').html(brew.getAbsorption() + " litres Lost");
+        this.config.el.find('.grain-indicator>.indicator-label').html(brew.getAbsorption() + " litres");
     };
 
     this.resetGrainBed = function() {
@@ -62,7 +62,7 @@ function VesselVisual(config) {
             opacity: .5
         }, 100);
 
-        this.config.el.find('.hop-indicator>.indicator-label').html(brew.getHopAbsorption(amount) + " litres Lost");
+        this.config.el.find('.hop-indicator>.indicator-label').html(brew.getHopAbsorption(amount) + " litres");
     };
 
     this.resetHops = function() {

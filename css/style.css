@@ -94,6 +94,16 @@
     border-left:15px solid green;
 }
 
+.arrow-down {
+    position: absolute;
+    top: 25px; right: 25px;
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-top: 15px solid red;
+    border-left:15px solid transparent;
+}
+
 #mash-grain, #kettle-hops {
     position: absolute;
     bottom: 0px;
@@ -123,7 +133,7 @@
 }
 
 .grain-indicator, .hop-indicator {
-    top: -22px;
+    top: -32px;
     left: 20px;
 }
 
