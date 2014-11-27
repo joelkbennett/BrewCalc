@@ -140,3 +140,35 @@
 .grain-indicator .indicator-label, .hop-indicator .indicator-label {
     background-color: red;
 }
+
+.indicator-radius {
+    border-bottom: thin dashed #999;
+    border-right: thin solid #999;
+    text-align: center;
+    position: absolute;
+    top:30px;
+    width: 50%;
+    z-index: 99;
+    font-size: .85em;
+}
+
+.liquid-sim {
+    animation-duration: 4s;
+    animation-name: liquid;
+    -webkit-animation: 4s;
+    -webkit-animation-name: liquid;
+}
+
+@keyframes liquid {
+    from {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}

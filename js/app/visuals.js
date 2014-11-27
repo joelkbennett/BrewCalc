@@ -10,10 +10,18 @@ function VesselVisual(config) {
         var setWidth = 2 * Math.abs(this.config.radius) * 10;
         this.config.el.css('height', setHeight);
         this.config.el.css('width', setWidth);
+
+        this.setRadius();
+    };
+
+    this.setRadius = function() {
+        var radiusInd = this.config.el.find('.indicator-radius');
+        radiusInd.html("17.25 cm");
     };
 
     this.update = function(liquidHeight) {
         var newLiquidHeight = liquidHeight * 10;
+        this.liquidSim();
         this.config.el.find('.liquid').animate({
             height: newLiquidHeight
         });
@@ -68,4 +76,8 @@ function VesselVisual(config) {
     this.resetHops = function() {
         $('.hop').remove();
     };
+
+    this.liquidSim = function() {
+        this.config.el.find('.liquid').addClass('liquid-sim');
+    }
 }
