@@ -15,8 +15,19 @@ function VesselVisual(config) {
     };
 
     this.setRadius = function() {
-        var radiusInd = this.config.el.find('.indicator-radius');
-        radiusInd.html("17.25 cm");
+        var vessel = this.config.el.attr('id');
+
+        switch (vessel) {
+            case 'htl-visual':
+                this.config.el.prev().html(system.htlRadius + ' cm');
+                break;
+            case 'mash-visual':
+                this.config.el.prev().html(system.mashRadius + ' cm');
+                break;
+            case 'kettle-visual':
+                this.config.el.prev().html(system.kettleRadius + ' cm');
+                break;
+        }
     };
 
     this.update = function(liquidHeight) {

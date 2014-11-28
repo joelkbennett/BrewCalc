@@ -7,10 +7,8 @@ var brew = new VolCalc(),
     hopInput = $('#hop'),
     mashDetails = $('#mash-details'),
     mashVol = mashDetails.find('#mash-vol'),
-    //mashOutVol = mashDetails.find("#mash-out-vol"),
     spargeVol = mashDetails.find("#sparge-vol"),
     preBoil = mashDetails.find('#pre-boil-vol'),
-    //postBoil = mashDetails.find('#post-boil-vol'),
     postCool = mashDetails.find('#cooled-vol');
 
 grainInput.on('change', function() {

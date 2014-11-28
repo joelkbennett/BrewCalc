@@ -16,7 +16,6 @@
     background-image: linear-gradient(#eee, #ddd);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    float: left;
     margin: 0px 20px 20px 0;
     position: relative;
     overflow: hidden;
@@ -31,6 +30,7 @@
     top: 5px;
     position: absolute;
     left: 5px;
+    z-index: 99;
 }
 
 .liquid {
@@ -142,14 +142,14 @@
 }
 
 .indicator-radius {
-    border-bottom: thin dashed #999;
-    border-right: thin solid #999;
+    border-bottom: thin dashed #bbb;
+    border-left: 2px solid #bbb;
+    border-right: 2px solid #bbb;
     text-align: center;
-    position: absolute;
-    top:30px;
+    margin-bottom: .75em;
     width: 50%;
-    z-index: 99;
     font-size: .85em;
+    color: #666;
 }
 
 .liquid-sim {
