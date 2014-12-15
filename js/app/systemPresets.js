@@ -4,6 +4,9 @@
 
 // Set system variables for each stainless kettle, batch size, etc.
 var system = {
+    htlRadius: 15.25,
+    mashRadius: 17.25,
+    kettleRadius: 19,
     mashDenom: Math.pow(17.25, 2) * Math.PI, // based on radius 17.25
     kettleDenom: Math.pow(19, 2) * Math.PI, // based on radius 19
     liquorDenom: Math.pow(15.25, 2) * Math.PI, // based on radius 15.25
