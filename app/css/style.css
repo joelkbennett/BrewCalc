@@ -8,6 +8,7 @@
 
 .sidebar {
     background-color: #efefef;
+    border-right: thin solid #ddd;
     min-height: 100vh;
 }
 
