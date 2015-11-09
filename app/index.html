@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrewCalc</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="row">
+    <aside id="sidebar" class=" sidebar col-md-3 section-padding text-center">
+        <img src="images/brewcalc-logo.png" alt="BrewCalc Logo" class="site-logo" />
+
+        <section id="about" class="section-padding text-left">
+            <p><strong>BrewCalc</strong> is a simple app to help speed up my volume calculations when brewing. I use a three kettle system, with a hot liquor, mash and boil kettle. By inputting the weight of grain used a recipe, this calculator will show the amount of water (in centimetres) required.</p>
+            <p>Checkout the project on <a href="https://github.com/joelkbennett/BrewCalc">GitHub</a>.</p>
+        </section>
+    </aside>
+
+    <section id="results" class="col-md-9 section-padding">
+        <div class="row">
+            <section id="grain-input" class="col-md-4">
+                <div class="panel-body">
+                    <form class="form-inline" role="form">
+                        <div class="input-group input-group-sm">
+                            <label for="grain">Grain Weight (lb)</label>
+                            <input type="number" class="form-control" id="grain" title="grain-weight"/>
+                        </div>
+                        <br><br>
+                        <div class="input-group input-group-sm">
+                            <label for="hop">Hop Weight (oz)</label>
+                            <input type="number" class="form-control" id="hop" title="hop-weight"/>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section id="mash-details" class="col-md-8">
+                <div class="panel-body">
+                    <div><p><strong>Mash Vol:</strong> <span id="mash-vol"></span></p></div>
+                    <div><p><strong>Sparge Vol:</strong> <span id="sparge-vol"></span></p></div>
+                    <div><p><strong>Pre-boil Vol:</strong> <span id="pre-boil-vol"></span></p></div>
+                    <div><p><strong>After Cooling:</strong> <span id="cooled-vol"></span></p></div>
+                </div>
+            </section>
+        </div>
+
+        <section id="visuals">
+            <div class="inline-block">
+                <div class="htl-radius indicator-radius"></div>
+
+                <div id="htl-visual" class="vessel">
+                    <div class="vessel-name">Hot Liquor</div>
+                    <div class="liquid water"></div>
+                    <div class="measure"></div>
+                    <div class="indicator level-indicator">
+                        <div class="indicator-label inline-block drop-shadow">0 cm</div>
+                        <div class="arrow-left inline-block"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inline-block">
+                <div class="mash-radius indicator-radius"></div>
+                <div id="mash-visual" class="vessel">
+                    <div class="vessel-name">Mash Tun</div>
+                    <div id="mash-grain">
+                        <div class="indicator grain-indicator">
+                            <div class="indicator-label inline-block drop-shadow">0 lb</div>
+                            <div class="arrow-down"></div>
+                        </div>
+                    </div>
+                    <div class="liquid mash"></div>
+                    <div class="measure"></div>
+                    <div class="indicator level-indicator">
+                        <div class="indicator-label inline-block drop-shadow">0 cm</div>
+                        <div class="arrow-left inline-block"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inline-block">
+                <div class="kettle-radius indicator-radius"></div>
+                <div id="kettle-visual" class="vessel">
+                    <div class="vessel-name">Boil Kettle</div>
+                    <div id="kettle-hops">
+                        <div class="indicator hop-indicator">
+                            <div class="indicator-label inline-block drop-shadow">0 oz</div>
+                            <div class="arrow-down"></div>
+                        </div>
+                    </div>
+                    <div class="liquid wort"></div>
+                    <div class="measure"></div>
+                    <div class="indicator level-indicator">
+                        <div class="indicator-label inline-block drop-shadow">0 cm</div>
+                        <div class="arrow-left inline-block"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app/systemPresets.js"></script>
+<script src="js/app/volCalc.js"></script>
+<script src="js/app/visuals.js"></script>
+<script src="js/app/app.js"></script>
+</body>
+</html>
