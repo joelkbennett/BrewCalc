@@ -14,10 +14,6 @@
 
 /* Logo */
 
-.site-logo {
-    margin-bottom: 2em;
-}
-
 .inline-block {
     display: inline-block;
 }
@@ -192,3 +188,4 @@
         transform: rotate(0deg);
     }
 }
+

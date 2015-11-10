@@ -1,10 +1,17 @@
 // Set system variables for each stainless kettle, batch size, etc.
 var system = {
+    // Recipe Values
+    grain: 12,
+    hops: 2,
+
     // Vessel Volumes
+    htlWidth: 30.5,
     htlRadius: 15.25,
     htlHeight: 25,
+    mashWidth: 34.5,
     mashRadius: 17.25,
     mashHeight: 30,
+    kettleWidth: 38,
     kettleRadius: 19,
     kettleHeight: 35,
 

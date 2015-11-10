@@ -16,13 +16,13 @@ function VesselVisual(config) {
 
         switch (vessel) {
             case 'htl-visual':
-                this.config.el.prev().html(system.htlRadius + ' cm');
+                this.config.el.prev().html(system.htlWidth / 2 + ' cm');
                 break;
             case 'mash-visual':
-                this.config.el.prev().html(system.mashRadius + ' cm');
+                this.config.el.prev().html(system.mashWidth / 2 + ' cm');
                 break;
             case 'kettle-visual':
-                this.config.el.prev().html(system.kettleRadius + ' cm');
+                this.config.el.prev().html(system.kettleWidth / 2 + ' cm');
                 break;
         }
     };
