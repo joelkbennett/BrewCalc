@@ -14,6 +14,14 @@
 
 /* Logo */
 
+/* Sections */
+
+#visuals {
+    border-top: thin solid #ddd;
+    margin-top: 1em;
+    padding-top: 2em;
+}
+
 .inline-block {
     display: inline-block;
 }
